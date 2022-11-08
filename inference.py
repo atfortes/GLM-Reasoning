@@ -7,7 +7,7 @@ import yaml
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
-gsm8k = GSM8K()
+gsm8k = GSM8K(config)
 
 # Construct prompt
 prompt = "Answer the following questions. Show your work and write your answer after '####'. \n"
@@ -19,6 +19,8 @@ def sample(question, seed):
 
     full_prompt = prompt + "Question: " + question + \
         " Answer: Let's think step by step. "
+    
+    # Remove calculator tokens from dataset
     full_prompt = re.sub(r'{}.*?{}'.format(re.escape("<<"),
                                            re.escape(">>")), '', full_prompt)
 
