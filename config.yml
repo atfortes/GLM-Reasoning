@@ -5,3 +5,5 @@ api_secret: "your_api_secret"
 
 # Paths
 GSM8K_path: "path to folder containing GSM8K .jsonl files"
+CommonsenseQA_path: "path to folder containing CommonsenseQA .jsonl files"
+StrategyQA_path: "path to folder containing StrategyQA .json files"
