@@ -1,6 +1,25 @@
 import json
 import re
 
+ANS_RE = re.compile(r"#### (\-?[0-9\.\,]+)")
+INVALID_ANS = "[invalid]"
+
+
+def extract_answer(completion):
+    match = ANS_RE.search(completion)
+    if match:
+        match_str = match.group(1).strip()
+        match_str = match_str.replace(",", "")
+        return match_str
+    else:
+        return INVALID_ANS
+
+
+def is_correct(model_completion, gt_example):
+    gt_answer = extract_answer(gt_example["answer"])
+    assert gt_answer != INVALID_ANS
+    return extract_answer(model_completion) == gt_answer
+
 
 class GSM8K():
     # math word problems
@@ -11,6 +30,7 @@ class GSM8K():
             samples = list(map(json.loads, f.readlines()))
             self.questions = [s["question"] for s in samples]
             self.answers = [self.extract_answer(s["answer"]) for s in samples]
+        assert len(self.questions) == len(self.answers)
 
     def extract_answer(self, completion):
         match = self.ANS_RE.search(completion)
