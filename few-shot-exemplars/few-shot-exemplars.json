@@ -1,5 +1,5 @@
 {
-    "math-word": [
+    "GSM8K": [
         "Q: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plant today?\nA: The answer is 6.",
         "Q: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?\nA: The answer is 5.",
         "Q: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?\nA: The answer is 39.",
@@ -9,7 +9,7 @@
         "Q: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?\nA: The answer is 33.",
         "Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?\nA: The answer is 8."
     ],
-    "csqa": [
+    "CommonsenseQA": [
         "Q: What do people use to absorb extra ink from a fountain pen?\nAnswer Choices:\n(a) shirt pocket\n(b) calligrapher's hand\n(c) inkwell\n(d) desk drawer\n(e) blotter\nA: The answer is (e).",
         "Q: What home entertainment equipment requires cable?\nAnswer Choices:\n(a) radio shack\n(b) substation\n(c) television\n(d) cabinet\nA: The answer is (c).",
         "Q: The fox walked from the city into the forest, what was it looking for?\nAnswer Choices:\n(a) pretty flowers\n(b) hen house\n(c) natural habitat\n(d) storybook\nA: The answer is (b).",
@@ -18,7 +18,7 @@
         "Q: Google Maps and other highway and street GPS services have replaced what?\nAnswer Choices:\n(a) united states\n(b) mexico\n(c) countryside\n(d) atlas\nA: The answer is (d).",
         "Q: Before getting a divorce, what did the wife feel who was doing all the work?\nAnswer Choices:\n(a) harder\n(b) anguish\n(c) bitterness\n(d) tears\n(e) sadness\nA: The answer is (c)."
     ],
-    "strategyqa": [
+    "StrategyQA": [
         "Q: Do hamsters provide food for any animals?\nA: The answer is yes.",
         "Q: Could Brooke Shields succeed at University of Pennsylvania?\nA: The answer is yes.",
         "Q: Yes or no: Hydrogen's atomic number squared exceeds number of Spice Girls?\nA: The answer is no.",
