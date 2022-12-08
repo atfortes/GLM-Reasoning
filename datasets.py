@@ -5,6 +5,7 @@ import re
 class GSM8K:
     # math word problems
 
+    ZERO_SHOT_PROMPT = "The answer (numeric) is [MASK]."
     ANS_RE = re.compile(r"(\-?[0-9\.\,]+)")
 
     def __init__(self, config, file_name="test.jsonl"):
@@ -23,6 +24,7 @@ class GSM8K:
 class CommonsenseQA:
     # multiple choice questions
 
+    ZERO_SHOT_PROMPT = "Among (a) through (e), the answer is [MASK]."
     ANS_RE = re.compile(r"\(a\)|\(b\)|\(c\)|\(d\)|\(e\)")
 
     def __init__(self, config, file_name="dev_rand_split.jsonl"):
@@ -39,6 +41,7 @@ class CommonsenseQA:
 class StrategyQA:
     # yes or no questions
 
+    ZERO_SHOT_PROMPT = "The answer (yes or no) is [MASK]."
     ANS_RE = re.compile(r"yes|no")
 
     def __init__(self, config, file_name="strategyqa_train.json"):
