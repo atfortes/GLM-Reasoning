@@ -23,7 +23,7 @@ class GSM8K:
 class CommonsenseQA:
     # multiple choice questions
 
-    ANS_RE = re.compile(r"\(a\)|\(b\)|\(c\)|\(d\)\|\(e\)")
+    ANS_RE = re.compile(r"\(a\)|\(b\)|\(c\)|\(d\)|\(e\)")
 
     def __init__(self, config, file_name="dev_rand_split.jsonl"):
         with open(config["CommonsenseQA_path"] + file_name) as f:
